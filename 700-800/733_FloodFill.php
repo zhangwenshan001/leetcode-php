@@ -1,6 +1,5 @@
 class Solution {
 
-    private $map = [];
     private $m;
     private $n;
     private $image;
@@ -30,11 +29,6 @@ class Solution {
     }
     
     function dfs($row,$col) {
-        if ($this->map[$row][$col] == 1) {
-            return;
-        }
-        
-        $this->map[$row][$col] = 1;
         if ($this->image[$row][$col] == $this->oldColor) {
             $this->image[$row][$col] = $this->newColor;
         } else {
