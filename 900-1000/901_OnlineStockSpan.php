@@ -21,13 +21,8 @@ class StockSpanner {
         $count = 1;
         while($j >= 0) {
             if ($this->prices[$i] >= $this->prices[$j]) {
-                if ($this->memo[$j] == 1) {
-                    $count++;
-                    $j = $j-1;
-                } else {
-                    $count += $this->memo[$j];
-                    $j = $j - $this->memo[$j];
-                }
+                $count += $this->memo[$j];
+                $j = $j - $this->memo[$j];
             } else {      
                 break;     
             }
