@@ -16,6 +16,8 @@
 class Solution {
 
     /**
+     * @Tag BFS
+     *
      * @param TreeNode $root
      * @return Integer[][]
      */

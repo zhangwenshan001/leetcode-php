@@ -15,7 +15,10 @@
  */
 
 class Solution {
+
     /**
+     * @Tag BFS
+     *
      * @param Employee[] $employees
      * @param Integer $id
      * @return Integer
