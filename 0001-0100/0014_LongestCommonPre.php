@@ -1,7 +1,6 @@
 <?php
 
-class LongestCommonPre
-{
+class LongestCommonPre {
     /**
      * @param String[] $strs
      *

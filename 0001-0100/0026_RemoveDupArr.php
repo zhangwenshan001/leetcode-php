@@ -31,6 +31,3 @@ class RemoveDupArr
     }
 }
 
-$nums = [0,0,0,0];
-(new RemoveDupArr())->removeDuplicates($nums);
-var_dump($nums);

@@ -1,7 +1,6 @@
 <?php
 
-class StrToInt
-{
+class StrToInt {
 
     /**
      * 字符串转化成整数，超出范围后输出最大最小整数
@@ -50,4 +49,3 @@ class StrToInt
     }
 }
 
-echo (new StrToInt())->myAtoi("91283472332");

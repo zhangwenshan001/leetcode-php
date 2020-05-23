@@ -1,7 +1,6 @@
 <?php
 
-class RomanToInt
-{
+class RomanToInt {
 
     /**
      * 罗马字母转换成整数
@@ -41,4 +40,3 @@ class RomanToInt
         return $num;
     }
 }
-echo (new RomanToInt())->getRomanInt('MCMXCIV');

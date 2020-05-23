@@ -46,4 +46,3 @@ class StrStr
     }
 }
 
-echo (new StrStr())->getIndexOfsubstr('aaaaa', 'bba');

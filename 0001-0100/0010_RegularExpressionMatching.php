@@ -1,7 +1,6 @@
 <?php
 
-class RegularExpressionMatching
-{
+class RegularExpressionMatching {
 
     /**
      * 实现简单的*.匹配
@@ -102,4 +101,3 @@ class RegularExpressionMatching
     }
 }
 
-var_dump((new RegularExpressionMatching())->isMatch('c', '.*a*'));

@@ -17,20 +17,24 @@ class Solution {
 
     /**
      * @param TreeNode $root
-     * @return Integer[]
+     * @return Integer
      */
-    function largestValues($root) {
-        if ($root == null) {
-            return [];
+    function maxLevelSum($root) {
+        if($root == null) {
+            return 0;
         }
-        $res = [];
         $queue = [$root];
-        
-        while (count($queue) != 0) {
+
+        $maxSum = PHP_INT_MIN;
+        $level = 0;
+        $maxLevel = 0;
+        while(count($queue) >0) {
+            $level++;
             $count = count($queue);
-            $max = PHP_INT_MIN;
-            for($i = 0;$i< $count;$i++) {
-                $max = max($max, $queue[$i]->val);
+
+            $curSum = 0;
+            for($i = 0;$i<$count;$i++) {
+                $curSum += $queue[$i]->val;
                 if ($queue[$i]->left != null) {
                     $queue[] = $queue[$i]->left;
                 }
@@ -38,12 +42,15 @@ class Solution {
                     $queue[] = $queue[$i]->right;
                 }
             }
-            $res[] = $max;
-            for($i = 0;$i< $count;$i++) {
+
+            for($i = 0;$i<$count;$i++) {
                 array_shift($queue);
             }
+            if ($curSum > $maxSum) {
+                $maxSum = $curSum;
+                $maxLevel = $level;
+            }
         }
-        
-        return $res;
+        return $maxLevel;
     }
 }

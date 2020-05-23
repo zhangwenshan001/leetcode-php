@@ -1,7 +1,6 @@
 <?php
 
-class LongestPalindromicSubstring
-{
+class LongestPalindromicSubstring {
     /**
      * 最长回文子串
      *
@@ -48,4 +47,3 @@ class LongestPalindromicSubstring
     }
 }
 
-echo (new LongestPalindromicSubstring())->getLongestPalindromicSubstring('b');

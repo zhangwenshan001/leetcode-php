@@ -1,7 +1,6 @@
 <?php
 
-class PalindromeNumber
-{
+class PalindromeNumber {
 
     /**
      * 是否是回文整数
@@ -38,4 +37,3 @@ class PalindromeNumber
     }
 }
 
-var_dump((new PalindromeNumber())->isPalindrome(12));

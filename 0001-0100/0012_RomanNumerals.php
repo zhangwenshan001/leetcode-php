@@ -52,4 +52,3 @@ class RomanNumerals
     }
 }
 
-echo (new RomanNumerals())->intToRoman(58);

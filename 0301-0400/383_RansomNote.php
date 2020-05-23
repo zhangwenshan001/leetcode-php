@@ -1,6 +1,5 @@
 <?php
 
-
 class RansomNote {
     function canConstruct($ransomNote, $magazine) {
         $ransomMap = [];

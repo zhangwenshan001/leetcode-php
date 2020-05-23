@@ -40,4 +40,3 @@ class DevideTwoIntegers
     }
 }
 
-echo (new DevideTwoIntegers())->divide(-10, 3);

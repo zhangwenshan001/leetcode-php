@@ -43,6 +43,3 @@ class RemoveElement
     }
 }
 
-$nums = [3, 3];
-(new RemoveElement())->remove($nums, 3);
-var_dump($nums);

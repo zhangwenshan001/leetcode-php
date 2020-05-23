@@ -1,3 +1,5 @@
+<?php
+
 class StockSpanner {
     
     private $prices;

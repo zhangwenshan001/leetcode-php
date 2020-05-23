@@ -1,7 +1,6 @@
 <?php
 
-class ZigZag
-{
+class ZigZag {
 
     /**
      * @param String  $s
@@ -41,4 +40,3 @@ class ZigZag
     }
 }
 
-echo (new ZigZag())->convert('PAYPALISHIRING', 4);

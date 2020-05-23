@@ -1,7 +1,6 @@
 <?php
 
-class ReverseInt
-{
+class ReverseInt {
 
     /**
      * 整数翻转，超过最大最小整数时，返回0
@@ -31,4 +30,3 @@ class ReverseInt
 
 }
 
-echo (new ReverseInt)->reverse(-123);

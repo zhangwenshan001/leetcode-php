@@ -1,7 +1,6 @@
 <?php
 
-class ThreeSumClosest
-{
+class ThreeSumClosest {
     /**
      * 思路：先排序，排序后遍历其中一个数，剩下两个从头尾向中间靠近
      *
@@ -51,4 +50,3 @@ class ThreeSumClosest
     }
 }
 
-echo (new ThreeSumClosest())->threeSumClosest([-3, -1, 1, 2, 5, 2, 4], 1);
