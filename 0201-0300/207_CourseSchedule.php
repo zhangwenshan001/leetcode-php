@@ -1,3 +1,4 @@
+<?php
 class Solution {
     /**
      * @param Integer $numCourses
