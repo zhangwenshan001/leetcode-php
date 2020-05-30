@@ -38,3 +38,56 @@ class Solution {
         return $count == $numCourses;
     }
 }
+
+
+/**
+ * Class SolutionDFS
+ * Note: check a cycle in Digraph
+ */
+class SolutionDFS {
+    private $marked = [];
+    private $adj = [];
+    private $onStack = [];
+
+    /**
+     * @param Integer $numCourses
+     * @param Integer[][] $prerequisites
+     * @return Boolean
+     */
+    function canFinish($numCourses, $prerequisites) {
+        $adj = array_fill(0, $numCourses, []);
+        foreach($prerequisites as $item) {
+            $adj[$item[0]][] = $item[1];
+        }
+        $this->adj = $adj;
+        $this->marked = array_fill(0, $numCourses, false);
+        $this->onStack = array_fill(0, $numCourses, false);
+
+        for($i=0;$i<$numCourses;$i++){
+            if (!$this->marked[$i]) {
+                $res = $this->dfs($i);
+                if (!$res) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function dfs($i){
+        $this->onStack[$i] = true;
+        $this->marked[$i] = true;
+        foreach($this->adj[$i] as $w) {
+            if (!$this->marked[$w]) {
+                $res = $this->dfs($w);
+                if (!$res) {
+                    return false;
+                }
+            } else if ($this->onStack[$w]) {
+                return false;
+            }
+        }
+        $this->onStack[$i] = false;
+        return true;
+    }
+}
