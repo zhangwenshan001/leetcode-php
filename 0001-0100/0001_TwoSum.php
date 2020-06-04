@@ -1,12 +1,27 @@
 <?php
 
 class Solution {
-
+    
     /**
      * @param Integer[] $nums
      * @param Integer $target
      * @return Integer[]
      */
+    function twoSum($nums, $target) {
+        $tmp = [];
+        $c = count($nums);
+        for($i = 0;$i < $nums;$i++) {
+            $n = $target - $nums[$i];
+            if (isset($tmp[$n])) {
+                return [$tmp[$n],$i];
+            }
+            $tmp[$nums[$i]] = $i;
+        }
+        
+        return [];
+    }
+    
+    /*
     function twoSum($nums, $target) {
         if (empty($nums) || count($nums) < 2) {
             return [];
@@ -20,5 +35,6 @@ class Solution {
             }
         }
     }
+    */
 
 }
