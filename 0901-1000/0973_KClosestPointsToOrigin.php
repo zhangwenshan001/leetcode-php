@@ -13,7 +13,7 @@ class Solution {
             $dist = $point[0] * $point[0] + $point[1] * $point[1];
             $dists[$key] = $dist;
         }
-        
+
         asort($dists);
         $res = [];
         
@@ -25,8 +25,7 @@ class Solution {
                 break;
             }
         }
-        
-        
+
         return $res;
     }
 }
